@@ -20,7 +20,7 @@ mkdir mc
 sleep 0.5
 curl -o mc/server.jar https://meta.fabricmc.net/v2/versions/loader/1.20.1/0.14.22/0.11.2/server/jar
 sleep 0.5
-java -jar fabric-installer.jar server
+*java* -jar fabric-installer.jar server
 sleep 0.5
 
 
