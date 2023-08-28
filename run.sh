@@ -17,12 +17,16 @@ sleep 0..5
 tar -C javahome -xvf graalvm.tar.gz
 sleep 0.5
 mkdir mc
+cd mc
 sleep 0.5
 curl -o mc/server.jar https://meta.fabricmc.net/v2/versions/loader/1.20.1/0.14.22/0.11.2/server/jar
 sleep 0.5
-*java* -jar fabric-installer.jar server
+/cloudclusters/javahome/graalvm-ee-java17-22.3.1/bin/java -jar server.jar nogui
 sleep 0.5
-
+supervisorctl stop all
+sleep 0.5
+echo eula=true>eula.txt
+/cloudclusters/javahome/graalvm-ee-java17-22.3.1/bin/java -jar server.jar nogui
 
 
 ****screen -d -m 
